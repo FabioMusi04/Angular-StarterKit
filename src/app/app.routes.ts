@@ -8,12 +8,17 @@ export const APP_ROUTES: Routes = [
     loadChildren: () =>
       import('../pages/home/home-routing.module').then((m) => m.HomeRoutingModule),
     // canActivate: [AuthGuard],
-    // data: { preload: true }
+    // data: { preload: true,  expectedRole: 'admin', }
   },
   {
     path: 'about',
     loadChildren: () =>
       import('../pages/about/about-routing.module').then((m) => m.AboutRoutingModule),
   },
+  {
+    path: 'login',
+    loadChildren: () =>
+      import('../pages/login/login-routing.module').then((m) => m.LoginRoutingModule),
+  }
 ];
 
